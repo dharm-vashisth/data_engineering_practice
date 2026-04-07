@@ -1,0 +1,8 @@
+.venv/
+env
+
+.idea/
+# data files
+*.csv
+data_files/
+logs/
