@@ -1,6 +1,12 @@
+import logging
+
 from pydantic import BaseModel, field_validator, EmailStr, ValidationError
 from typing import Optional
+from logger import get_loader_by_name
 
+
+# custom logger initialization
+validation_logger = get_loader_by_name(loader_name="validation_logger", file_name="validation_failure.log", level=logging.ERROR)
 
 # Data Contract
 class StudentRecords(BaseModel):
@@ -32,4 +38,4 @@ if __name__ == "__main__":
             student = StudentRecords(**record)
             print(f"✅Data validation is successful for {record['student_name']} \n")
         except ValidationError as e:
-            print(f"❌Data validation failed for {record['student_name']}. \n {e.json()}\n")
+            validation_logger.error(f"❌Data validation failed for {record['student_name']}. \n {e.json()}\n")
