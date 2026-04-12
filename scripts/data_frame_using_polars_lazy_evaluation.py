@@ -22,6 +22,7 @@ if __name__=="__main__":
     )
     print(avg_sal_df.explain())
 
-    avg_sal_df.collect() # lazy dataframe will execute the operations
-    avg_sal_df.show()
+    result = avg_sal_df.collect() # lazy dataframe will return a dataframe after collect()
+    result.show()
+    print(f"Final Dataframe type is {type(result)} where as original is {type(avg_sal_df)}")
 
