@@ -3,4 +3,5 @@
 - Python
 
 Learning is fun & Happy Journey!
-This directory is used for praticing data engineering stuff like  python, duckbb,ETL PIPELINE  CODE 
+
+This directory is used for practicing data engineering stuff like  python, duckbb, ETL pipeline code.
