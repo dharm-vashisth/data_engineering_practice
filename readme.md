@@ -1,6 +1,8 @@
 ## Practice repo for me
 - Data Engineering
 - Python
+- Pyarrow
+- Polars
 
 Learning is fun & Happy Journey!
 
